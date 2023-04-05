@@ -6,7 +6,7 @@
 #    By: fhenrich <fhenrich@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/01 19:32:34 by fhenrich          #+#    #+#              #
-#    Updated: 2023/03/30 12:31:58 by fhenrich         ###   ########.fr        #
+#    Updated: 2023/04/05 17:10:03 by fhenrich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS	= -Wall -Werror -Wextra  -std=c++98 -pedantic -Wunused -Wshadow -g
 
 NAME	= webserv
 
-SRC		= src/main.cpp
+SRC		= src/main.cpp src/Server.cpp src/EventQueue.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 
