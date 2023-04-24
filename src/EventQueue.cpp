@@ -6,7 +6,7 @@
 /*   By: fhenrich <fhenrich@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 16:26:54 by fhenrich          #+#    #+#             */
-/*   Updated: 2023/04/05 17:10:51 by fhenrich         ###   ########.fr       */
+/*   Updated: 2023/04/06 13:13:22 by fhenrich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ void EventQueue::add(int fd) {
 	change_list.resize(change_list.size() + 1);
 	event_list.resize(event_list.size() + 1);
 	EV_SET(&change_list[change_list.size() - 1], fd, EVFILT_READ, EV_ADD, 0, 0, 0);
+	for (size_t i = 0; i < change_list.size(); i++) {
+		std::cout << "Waiting on fd " << change_list[i].ident << std::endl;
+	}
 }
 
 void EventQueue::remove(int fd) {
@@ -40,6 +43,9 @@ void EventQueue::remove(int fd) {
 			event_list.erase(event_list.begin());
 			break;
 		}
+	}
+	for (size_t i = 0; i < change_list.size(); i++) {
+		std::cout << "Waiting on fd " << change_list[i].ident << std::endl;
 	}
 }
 

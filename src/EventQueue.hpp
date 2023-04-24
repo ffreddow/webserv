@@ -6,7 +6,7 @@
 /*   By: fhenrich <fhenrich@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 16:00:19 by fhenrich          #+#    #+#             */
-/*   Updated: 2023/04/05 17:01:05 by fhenrich         ###   ########.fr       */
+/*   Updated: 2023/04/06 13:09:00 by fhenrich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <sys/event.h>
 #include <exception>
+#include <iostream>
 #include <vector>
 
 class EventQueue {
